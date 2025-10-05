@@ -83,7 +83,7 @@ function showCategory(categoryName) {
   <h2>{{ category[0] }}</h2>
   {% for post in category[1] %}
     <div class="post-item">
-      <a href="{{ post.url }}">{{ post.title }}</a>
+     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
     </div>
   {% endfor %}
