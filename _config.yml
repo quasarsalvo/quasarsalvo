@@ -1,3 +1,6 @@
 title: QuasarSalvoの武器カスタム置き場
 description: Delta Force カスタム備忘録
 theme: minima
+
+header_pages:
+  - categories.md
