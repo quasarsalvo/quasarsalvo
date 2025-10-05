@@ -11,7 +11,10 @@ function showCategory(categoryName) {
     el.style.display = 'none';
   });
   // 選択したものだけ表示
-  document.getElementById('cat-' + categoryName).style.display = 'block';
+  const target = document.getElementById('cat-' + categoryName);
+  if (target) {
+    target.style.display = 'block';
+  }
 }
 </script>
 
@@ -30,6 +33,7 @@ function showCategory(categoryName) {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .weapon-button:hover {
@@ -38,10 +42,33 @@ function showCategory(categoryName) {
 
 .category-posts {
   display: none;
-  margin-top: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f6f8fa;
+  border-radius: 8px;
+}
+
+.category-posts h2 {
+  margin-top: 0;
+  color: #24292e;
+}
+
+.post-item {
+  margin: 15px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-date {
+  color: #586069;
+  font-size: 14px;
+  margin-left: 10px;
 }
 </style>
-
 
 <div class="weapon-list">
 {% for category in site.categories %}
@@ -54,13 +81,11 @@ function showCategory(categoryName) {
 {% for category in site.categories %}
 <div class="category-posts" id="cat-{{ category[0] | slugify }}">
   <h2>{{ category[0] }}</h2>
-  <ul>
-    {% for post in category[1] %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span style="color: #666;">- {{ post.date | date: "%Y/%m/%d" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
+  {% for post in category[1] %}
+    <div class="post-item">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
+    </div>
+  {% endfor %}
 </div>
 {% endfor %}
