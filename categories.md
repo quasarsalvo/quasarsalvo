@@ -72,14 +72,14 @@ function showCategory(categoryName) {
 
 <div class="weapon-list">
 {% for category in site.categories %}
-  <button class="weapon-button" onclick="showCategory('{{ category[0] | slugify }}')">
+  <button class="weapon-button" onclick="showCategory('{{ category[0] }}')">
     {{ category[0] }} ({{ category[1].size }})
   </button>
 {% endfor %}
 </div>
 
 {% for category in site.categories %}
-<div class="category-posts" id="cat-{{ category[0] | slugify }}">
+<div class="category-posts" id="cat-{{ category[0] }}">
   <h2>{{ category[0] }}</h2>
   {% for post in category[1] %}
     <div class="post-item">
