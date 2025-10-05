@@ -2,6 +2,7 @@ title: QuasarSalvoの武器カスタム置き場
 description: Delta Force カスタム備忘録
 theme: minima
 future: true
+baseurl: "/quasarsalvo"
 
 header_pages:
   - categories.md
