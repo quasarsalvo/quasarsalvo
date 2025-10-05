@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: QuasarSalvoの武器カスタム置き場
 ---
 
