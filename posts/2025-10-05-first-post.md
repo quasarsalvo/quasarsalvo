@@ -1,11 +1,10 @@
 ---
 layout: post
-title: 初めての記事
+title: "万能M4"
+date: 2025-10-05
+categories: M4A1
 ---
 
-# 初めての記事
+# カスタムコード
 
-ここに記事の内容を書きます。
-
-## セクション1
-内容...
+M4A1 Assault Rifle-Warfare-6HOHA1402VN7K4KV5MF2R
