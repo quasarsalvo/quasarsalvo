@@ -42,7 +42,6 @@ function showCategory(categoryName) {
 }
 </style>
 
-# 武器一覧
 
 <div class="weapon-list">
 {% for category in site.categories %}
