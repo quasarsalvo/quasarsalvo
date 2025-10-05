@@ -1,6 +1,5 @@
 ---
 layout: home
-title: QuasarSalvoの武器カスタム置き場
 ---
 
 # 武器カスタム置き場へようこそ
